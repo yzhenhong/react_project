@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import ajax from './utils/ajax'
 import * as serviceWorker from './serviceWorker';
+import './index.css';
+
+React.Component.prototype.$ajax = ajax;
+React.Component.prototype.$net = ajax;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
