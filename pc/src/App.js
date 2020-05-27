@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 //引入装载路由组件的组件 Route
 //重定向 Redirect
 //引入触发切换路由的向组件 Link,NavLink
-// import { HashRouter, Route, Redirect, Link, NavLink } from 'react-router-dom'
+// import { HashRouter,Switch, Route, Redirect, Link, NavLink } from 'react-router-dom'
 
 import './App.css'; // 使用 CSS Modules 的方式引入
 
