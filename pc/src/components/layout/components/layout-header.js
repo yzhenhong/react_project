@@ -11,7 +11,7 @@ export default class LayoutHeader extends Component {
     return (
       <div className="layout-header">
         <div>
-          {/* <img src="../../../assets/img/logo.png" alt=""> */}
+          <img src={require('../../../assets/img/logo.png')} alt=""/>
           医保公共服务管理平台
         </div>
         <div>
@@ -19,7 +19,7 @@ export default class LayoutHeader extends Component {
           <div>技术支持</div>
           <div>
             系统管理员
-            {/* <img src="../../../assets/svg/pulldown.svg" alt=""> */}
+            <img src={require('../../../assets/svg/pulldown.svg')} alt=""/>
           </div>
         </div>
       </div>

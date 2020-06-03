@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { LayoutHeader, LayoutSidebar, LayoutMain } from './components/index'
-import './index.css';
+import './index.less';
 
 export default class Layout extends Component {
   constructor(props) {

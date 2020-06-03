@@ -86,7 +86,7 @@ module.exports = function(webpackEnv) {
         options: cssOptions,
       },
       // less配置
-      {
+    　{
         loader: require.resolve('less-loader'),
         options: lessOptions,
       },
@@ -496,30 +496,20 @@ module.exports = function(webpackEnv) {
             {
               test: lessRegex,
               exclude: cssModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 1,
-                  sourceMap: isEnvProduction
-                    ? shouldUseSourceMap
-                    : isEnvDevelopment,
-                },
-                'less-loader'
-              ),
+              use: getStyleLoaders({
+                importLoaders: 1,
+                sourceMap: isEnvProduction && shouldUseSourceMap,
+              }),
               sideEffects: true,
             },
             {
               test: lessModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 1,
-                  sourceMap: isEnvProduction
-                    ? shouldUseSourceMap
-                    : isEnvDevelopment,
-                  modules: true,
-                  getLocalIdent: getCSSModuleLocalIdent,
-                },
-                'less-loader'
-              ),
+              use: getStyleLoaders({
+                importLoaders: 1,
+                sourceMap: isEnvProduction && shouldUseSourceMap,
+                modules: true,
+                getLocalIdent: getCSSModuleLocalIdent,
+              }),
             },
             // less配置
             // "file" loader makes sure those assets get served by WebpackDevServer.
