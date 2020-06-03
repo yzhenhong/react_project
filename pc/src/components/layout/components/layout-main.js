@@ -9,7 +9,7 @@ export default class LayoutMain extends Component {
 
   render() {
     return (
-      <div className="LayoutMain">
+      <div className="layout-main">
         LayoutMain
       </div>
     );

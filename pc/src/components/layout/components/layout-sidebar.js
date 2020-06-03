@@ -9,7 +9,7 @@ export default class LayoutSidebar extends Component {
 
   render() {
     return (
-      <div className="LayoutSidebar">
+      <div className="layout-main">
         LayoutSidebar
       </div>
     );

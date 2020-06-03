@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { layoutHeader, layoutSidebar, layoutMain } from './components'
+import { LayoutHeader, LayoutSidebar, LayoutMain } from './components/index'
+import './index.css';
 
 export default class Layout extends Component {
   constructor(props) {
@@ -11,9 +12,9 @@ export default class Layout extends Component {
   render() {
     return (
       <div className="Layout">
-        <layoutHeader></layoutHeader>
-        <layoutSidebar></layoutSidebar>
-        <layoutMain></layoutMain>
+        <LayoutHeader></LayoutHeader>
+        <LayoutSidebar></LayoutSidebar>
+        <LayoutMain></LayoutMain>
       </div>
     );
   };

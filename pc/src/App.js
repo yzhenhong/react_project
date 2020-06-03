@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './views/home/index'
 import Login from './views/login/index'
+import Layout from './components/layout/index'
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path='/login' component={Login}/>
+          <Route path='/layout' component={Layout}/>
           <Route path='/' component={Home}/>
         </Switch>
       </Router>

@@ -1,12 +1,12 @@
 export { 
-  default as layoutHeader
+  default as LayoutHeader
 } 
 from './layout-header'
 export { 
-  default as layoutSidebar
+  default as LayoutSidebar
 } 
 from './layout-sidebar'
 export {
-  default as layoutMain
+  default as LayoutMain
 }
 from './layout-main'
