@@ -53,6 +53,24 @@
   overflow-y: auto;
   background: #2D3441;
   z-index: 1000;
+  .ant-menu{
+    background: #2D3441;
+    .ant-menu-submenu,.ant-menu-submenu .ant-menu-sub,.ant-menu-item,.ant-menu-item-group-title{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #F2F7FE;
+      background: #2D3441;
+    }
+    .ant-menu-item.ant-menu-item-selected{
+      background: #20262F;
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #9EA2A9;
+    }
+  }
+  .ant-menu-inline{
+    border: none;
+  }
 }
 .layout-sidebar::-webkit-scrollbar {
     display: none;
