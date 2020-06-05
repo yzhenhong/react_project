@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import Home from './views/home/index'
 import Login from './views/login/index'
@@ -20,9 +21,12 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path='/login' component={Login}/>
+          <Route path="/" exact render={()=>{
+						return <Redirect to="/home"/>
+					}}/>
+          <Route path='/home' exact component={Home}/>
           <Route path='/layout' component={Layout}/>
-          <Route path='/' component={Home}/>
+          <Route path='/login' component={Login}/>
         </Switch>
       </Router>
     )

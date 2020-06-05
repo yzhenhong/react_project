@@ -1,3 +1,9 @@
+.layout-wrap{
+  width: 100%;
+  height: 100%;
+  padding-top: 70px;
+}
+
 // 头部
 .layout-header{
   position: fixed;
@@ -60,6 +66,10 @@
       font-size: 14px;
       color: #F2F7FE;
       background: #2D3441;
+      .ant-menu-submenu-arrow,.ant-menu-submenu-arrow::before,.ant-menu-submenu-arrow::after{
+        color: #F2F7FE;
+        background-image: linear-gradient(to right, rgba(242, 247, 254, 0.65), rgba(242, 247, 254, 0.65));
+      }
     }
     .ant-menu-item.ant-menu-item-selected{
       background: #20262F;
@@ -78,11 +88,10 @@
 
 
 // 右边主体
-.app-main {
+.layout-main {
   position: relative;
   margin-left: 200px;
   min-height: 100%;
   background: #F2F7FE;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
 }

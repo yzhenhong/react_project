@@ -13,9 +13,7 @@ React.Component.prototype.$ajax = ajax;
 React.Component.prototype.$net = ajax;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>,
+  <App/>,
   document.getElementById('root')
 );
 

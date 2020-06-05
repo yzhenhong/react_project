@@ -5,7 +5,6 @@ export default class LayoutSidebar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: "mail",
     };
   }
 

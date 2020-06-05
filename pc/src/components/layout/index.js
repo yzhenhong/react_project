@@ -11,7 +11,7 @@ export default class Layout extends Component {
 
   render() {
     return (
-      <div className="Layout">
+      <div className="layout-wrap">
         <LayoutHeader></LayoutHeader>
         <LayoutSidebar></LayoutSidebar>
         <LayoutMain></LayoutMain>
