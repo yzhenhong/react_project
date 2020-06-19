@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { withRouter } from "react-router-dom";
 
-export default class LayoutHeader extends Component {
+class LayoutHeader extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -10,7 +11,7 @@ export default class LayoutHeader extends Component {
   render() {
     return (
       <div className="layout-header">
-        <div>
+        <div onClick={this.goHome.bind(this)}>
           <img src={require('../../../assets/img/logo.png')} alt=""/>
           医保公共服务管理平台
         </div>
@@ -26,4 +27,9 @@ export default class LayoutHeader extends Component {
     );
   };
 
+  goHome () {
+    this.props.history.push({pathname:"/home/index"});
+  }
 }
+
+export default withRouter(LayoutHeader);

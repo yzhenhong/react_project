@@ -1,0 +1,72 @@
+{
+  "id": "1790727",
+  "name": "pc端",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8540671",
+      "name": "工业经济运行",
+      "font_class": "icon-test",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "13236370",
+      "name": "示例",
+      "font_class": "changyongshili",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "5186976",
+      "name": "工具箱",
+      "font_class": "gongjuxiang",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "899356",
+      "name": "系统设置",
+      "font_class": "xitongshezhi",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "2570067",
+      "name": "业务",
+      "font_class": "yewu-tianchong",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "3216517",
+      "name": "渠道",
+      "font_class": "qudao",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "5334194",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "11058856",
+      "name": "小程序",
+      "font_class": "xiaochengxu",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "14152443",
+      "name": "监测",
+      "font_class": "jiance",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}

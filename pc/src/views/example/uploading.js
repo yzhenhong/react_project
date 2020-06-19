@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class index extends Component {
+export default class Uploading extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -9,8 +9,8 @@ export default class index extends Component {
 
   render() {
     return (
-      <div className="index">
-        index
+      <div className="Uploading">
+        Uploading
       </div>
     );
   };

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Route } from "react-router-dom";
+import routes from '../../../routes/index';
 
 export default class LayoutMain extends Component {
   constructor(props) {
@@ -10,7 +12,11 @@ export default class LayoutMain extends Component {
   render() {
     return (
       <div className="layout-main">
-        LayoutMain
+        {
+          routes.map((item)=>{
+            return <Route key={item.name} path={item.path} exact component={item.component}/>
+          })
+        }
       </div>
     );
   };

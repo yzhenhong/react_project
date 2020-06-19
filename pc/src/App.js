@@ -5,9 +5,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Home from './views/home/index'
-import Login from './views/login/index'
 import Layout from './components/layout/index'
+import Login from './views/account/login'
 import './App.css';
 
 class App extends Component {
@@ -22,17 +21,23 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/" exact render={()=>{
-						return <Redirect to="/home"/>
+						return <Redirect to="/home/index"/>
 					}}/>
-          <Route path='/home' exact component={Home}/>
-          <Route path='/layout' component={Layout}/>
-          <Route path='/login' component={Login}/>
+          <Route path='/home' component={Layout}/>
+          <Route path='/example' component={Layout}/>
+          <Route path='/account/login' component={Login}/>
+          <Route path='*' render={()=>{
+						return <Redirect to="/home/index"/>
+					}}/>
         </Switch>
       </Router>
     )
   };
-
+  
+  componentDidMount() {
+  };
 
 }
+
 
 export default App;
