@@ -1,4 +1,4 @@
-const sidebarMenuList = [
+const defaultMenu = [
   {
     icon: 'icon-shouye',
     name: 'index',
@@ -67,5 +67,13 @@ const sidebarMenuList = [
       },
     ]
   },
-]
-export default  sidebarMenuList
+];
+
+export default function menu(menu = defaultMenu, action) {
+  switch (action.type) {
+    case "setMenu":
+      return action.data;
+    default:
+      return menu;
+  }
+}
