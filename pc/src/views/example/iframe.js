@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Iframe extends Component {
+export default class IframeExample extends Component {
   constructor(props) {
     super(props)
     this.state = {

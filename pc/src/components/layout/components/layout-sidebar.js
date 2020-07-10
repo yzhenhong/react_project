@@ -10,7 +10,24 @@ class LayoutSidebar extends Component {
       sidebarMenuDom: null,
       whiteList: ['/login', '/401', '/404', '/'],
       sidebarMenuList: sidebarMenuList,
+      openedsIndex: [],
+      activeIndex: '',
+
     };
+
+    this.state.sidebarMenuList.forEach((item1,index1)=>{
+      if(this.props.match.path === item1.path){
+        console.log([index1.toString()])
+        this.state.openedsIndex = [index1.toString()]
+      }
+      item1.children.forEach((item2,index2)=>{
+        if(this.props.location.pathname === item2.path){
+          console.log(index1.toString()+'-'+index2.toString())
+          this.state.activeIndex = index1.toString()+'-'+index2.toString()
+        }
+      })
+    })
+
   }
 
   render() {
@@ -24,6 +41,8 @@ class LayoutSidebar extends Component {
     let sidebarMenuDom = (
       <Menu
         mode="inline"
+        defaultOpenKeys={this.state.openedsIndex}
+        defaultSelectedKeys={this.state.activeIndex}
       >
         {
           this.state.sidebarMenuList.map((item1,index1)=>{
@@ -35,9 +54,9 @@ class LayoutSidebar extends Component {
     this.setState({sidebarMenuDom: sidebarMenuDom})
   };
   renderSubMenu = (item1,index1) => {
-    if (item1.meta&&item1.meta.show!==false&&item1.meta.title==='首页'){
+    if (item1.children&&item1.children.length>0&&item1.meta&&item1.meta.show!==false&&item1.meta.title==='首页'){
       // 首页 不需要子菜单 单独展示
-      return this.renderMenuItem(item1,index1)
+      return this.renderMenuItem(item1.children[0],index1)
     } else if (item1.children&&item1.children.length>0&&item1.meta&&item1.meta.show!==false&&item1.meta.title!=='首页') {
       // 一级菜单 有子菜单
       return (

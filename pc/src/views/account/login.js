@@ -21,8 +21,9 @@ export default class Login extends Component {
       <div className="login">
         <div className="login-box">
           <Form
-            initialValues={this.state.loginData}
+            size="middle"
             ref={this.formRef}
+            initialValues={this.state.loginData}
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
           >

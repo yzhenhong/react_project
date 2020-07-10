@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
 
-class Status extends Component {
+class StatusExample extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,6 +13,7 @@ class Status extends Component {
       <div className="status">
         <div onClick={this.status.bind(this)}>
           status
+          {this.props.nav}
         </div>
       </div>
     );
@@ -21,12 +22,9 @@ class Status extends Component {
   status () {
     this.props.dispatch({
       type: 'setNav',
-      data: [1]
+      data: '示例'
     });
-    console.log(this.props)
   }
 }
 
-export default connect(store=>store)(Status)
-// export default connect(store=>store)(Status)
-// export default Status
+export default connect(store=>store)(StatusExample)
