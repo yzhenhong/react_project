@@ -2,13 +2,13 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 
 module.exports = function (app) {
-  app.use("/v1",
+  app.use("/api/v1/query",
     createProxyMiddleware({
-      target: 'http://10.96.153.36:8081',
+      target: 'http://hall-test.shuame.org',
       changeOrigin: true,
-      pathRewrite: {
-        "^/v1": ""
-      }
+      // pathRewrite: {
+      //   "^/v1": ""
+      // }
     })
   )
 }

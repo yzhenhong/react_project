@@ -12,18 +12,23 @@ class LayoutSidebar extends Component {
       sidebarMenuList: sidebarMenuList,
       openedsIndex: [],
       activeIndex: '',
-
     };
 
     this.state.sidebarMenuList.forEach((item1,index1)=>{
       if(this.props.match.path === item1.path){
-        console.log([index1.toString()])
         this.state.openedsIndex = [index1.toString()]
+        // this.setState({
+        //   openedsIndex: [index1.toString()]
+        // })
+        // console.log([index1.toString()])
       }
       item1.children.forEach((item2,index2)=>{
         if(this.props.location.pathname === item2.path){
-          console.log(index1.toString()+'-'+index2.toString())
           this.state.activeIndex = index1.toString()+'-'+index2.toString()
+          // this.setState({
+          //   activeIndex: index1.toString()+'-'+index2.toString()
+          // })
+          // console.log(index1.toString()+'-'+index2.toString())
         }
       })
     })
@@ -38,6 +43,25 @@ class LayoutSidebar extends Component {
     );
   }
   componentDidMount() {
+    // this.state.sidebarMenuList.forEach((item1,index1)=>{
+    //   if(this.props.match.path === item1.path){
+    //     // this.state.openedsIndex = [index1.toString()]
+    //     this.setState({
+    //       openedsIndex: [index1.toString()]
+    //     })
+    //     console.log([index1.toString()])
+    //   }
+    //   item1.children.forEach((item2,index2)=>{
+    //     if(this.props.location.pathname === item2.path){
+    //       // this.state.activeIndex = index1.toString()+'-'+index2.toString()
+    //       this.setState({
+    //         activeIndex: index1.toString()+'-'+index2.toString()
+    //       })
+    //       console.log(index1.toString()+'-'+index2.toString())
+    //     }
+    //   })
+    // })
+    
     let sidebarMenuDom = (
       <Menu
         mode="inline"
@@ -52,6 +76,8 @@ class LayoutSidebar extends Component {
       </Menu>
     )
     this.setState({sidebarMenuDom: sidebarMenuDom})
+    // console.log(this.state)
+
   };
   renderSubMenu = (item1,index1) => {
     if (item1.children&&item1.children.length>0&&item1.meta&&item1.meta.show!==false&&item1.meta.title==='首页'){

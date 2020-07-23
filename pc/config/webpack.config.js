@@ -200,6 +200,11 @@ module.exports = function(webpackEnv) {
       // module chunks which are built will work in web workers as well.
       globalObject: 'this',
     },
+    externals: {
+      'BMap': 'BMap',
+      'BMapLib': 'BMapLib',
+      'BMAP_ANCHOR_TOP_RIGHT': 'BMAP_ANCHOR_TOP_RIGHT',
+    },
     optimization: {
       minimize: isEnvProduction,
       minimizer: [
