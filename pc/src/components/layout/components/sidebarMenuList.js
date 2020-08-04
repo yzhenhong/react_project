@@ -68,6 +68,14 @@ const sidebarMenuList = [
         }
       },
       {
+        name: 'charts',
+        path:'/example/charts',
+        meta: {
+          title: 'charts',
+          show: true
+        }
+      },
+      {
         name: 'iframe',
         path:'/example/iframe',
         meta: {

@@ -5,6 +5,7 @@ export default class Index extends Component {
     super(props)
     this.state = {
     }
+    console.log('process.env.NODE_ENV',process.env.NODE_ENV)
   };
 
   render() {
