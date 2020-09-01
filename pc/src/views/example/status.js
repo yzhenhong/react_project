@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
+import { Button } from 'antd';
 
 class StatusExample extends Component {
   constructor(props) {
@@ -11,10 +12,10 @@ class StatusExample extends Component {
   render() {
     return (
       <div className="status">
-        <div onClick={this.status.bind(this)}>
-          status
+        <div>
           {this.props.nav}
         </div>
+        <Button type="primary" onClick={this.status.bind(this)}>修改</Button>
       </div>
     );
   };

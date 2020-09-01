@@ -76,6 +76,14 @@ const sidebarMenuList = [
         }
       },
       {
+        name: 'richText',
+        path:'/example/richText',
+        meta: {
+          title: 'richText',
+          show: true
+        }
+      },
+      {
         name: 'iframe',
         path:'/example/iframe',
         meta: {

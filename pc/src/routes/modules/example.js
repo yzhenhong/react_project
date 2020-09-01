@@ -4,6 +4,7 @@ import List from '../../views/example/list'
 import Uploading from '../../views/example/uploading'
 import Map from '../../views/example/map'
 import Charts from '../../views/example/charts'
+import RichText from '../../views/example/richText'
 import Iframe from '../../views/example/iframe'
 
 
@@ -15,6 +16,7 @@ const  exampleRouterMap = [
   { name:'uploading', path:'/example/uploading', component: Uploading },
   { name:'map', path:'/example/map', component: Map },
   { name:'charts', path:'/example/charts', component: Charts },
+  { name:'richText', path:'/example/richText', component: RichText },
   { name:'iframe', path:'/example/iframe', component: Iframe },
 ]
 
